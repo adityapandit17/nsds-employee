@@ -52,5 +52,5 @@ gem 'active_skin'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 group :production do
-  gem 'pg'
+gem 'pg', '~> 0.18.4'
 end
