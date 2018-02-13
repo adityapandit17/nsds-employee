@@ -10,6 +10,8 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+$skinLogo: url("logo-small2.png") no-repeat 0 0;
+$skinActiveColor: #00cc88;
 @import "active_skin";
 
 // Overriding any non-variable SASS must be done after the fact.
@@ -17,4 +19,4 @@
 //
 //   .status_tag { background: #6090DB; }
 
-$skinLogo: url('logo-small1.png');
+// $skinLogo: url('logo-small1.png');

@@ -28,20 +28,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><%=image_tag 'logo-small1.png' %></a>
+        <a class="navbar-brand" href="#"><%=image_tag 'logo-small2.png', style: "margin-top:-10px "%></a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
              <% if current_employee %>
-            <li><%= link_to 'profile', employee_path(current_employee) %></li>
+            <li><%= link_to 'Employee-profile', employee_path(current_employee) %></li>
 <% end %>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+           <!--  <li><%= link_to "Link2", "/path2"  %></li>
+            <li><%= link_to "Link3", "/path3"  %></li> -->
             <% if employee_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_employee_session_path, method: :delete) %>        
   </li>
 <% else %>
-  <li>
+  <li">
   <%= link_to('Login', new_employee_session_path)  %>  
   </li>
 <% end %>

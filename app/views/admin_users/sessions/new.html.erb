@@ -1,0 +1,47 @@
+<style type="text/css">
+    .panel-container {
+      margin-top: 8%;
+    }
+  </style>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+ <div class="container">
+   
+   <div style="margin-left: 35px">
+<%=image_tag 'logo-small.png' , style: "margin-left:50px;margin-bottom:20px" %>
+   <h1 style="margin-left: 30%;margin-top:-35px;font-size: 25px">Administrator</h1>
+      <br>
+      <br>
+        
+   </div>    
+   <form>
+            <div class="form-group" style="margin-left: 20px">
+              <label for="email">Email:</label>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control" , placeholder: "Enter email" %>
+            </div>
+            <br>
+            <div class="form-group" >
+              <label for="pwd">Password:</label>
+              <%= f.password_field :password, autocomplete: "off" , class: "form-control" , placeholder: "Enter password" %>
+            </div>
+            <br>
+          
+         <% if devise_mapping.rememberable? -%>
+    <div class="form-control" style="margin-left: 12%">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+      <% end -%>
+           <br>
+            <%= f.submit "Log in" , class: "btn btn-success btn-block" , style: "margin-left:40%;margin-bottom:20px " %>
+          
+          </form>
+
+        </div>
+      </div>
+      
+<% end %>
+
+    
