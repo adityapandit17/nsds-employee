@@ -1,0 +1,39 @@
+<style type="text/css">
+    .panel-container {
+      margin-top: 8%;
+    }
+  </style>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+ <div class="container">
+    <div class="col-md-4 col-md-offset-4 panel-container">
+<%=image_tag 'logo-small.png' , style: "margin-left:50px;margin-bottom:20px" %>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Sign In</div>
+        <div class="panel-body">
+          <form action="bootstrapExample.html">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control" , placeholder: "Enter email" %>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <%= f.password_field :password, autocomplete: "off" , class: "form-control" , placeholder: "Enter password" %>
+            </div>
+            <div>
+              <% if devise_mapping.rememberable? -%>
+    <div class="">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+            </div>
+            <%= f.submit "Log in" , class: "btn btn-success btn-block"%>
+          
+          </form>
+        </div>
+      </div>
+<% end %>
+

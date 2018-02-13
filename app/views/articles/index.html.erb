@@ -1,0 +1,12 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<%- model_class = Article -%>
+
+<% @articles.each do |article| %>
+<div class="w3-panel w3-card-4">
+<div style="font-size:30px"><%= article.title %></div>
+<div><h6><%=l article.created_at %></h6></div>
+<div><p><%= article.description %></p></div>
+</div>
+ <% end %>
+
