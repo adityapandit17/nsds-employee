@@ -1,5 +1,6 @@
 <style type="text/css">
-    .panel-container {
+    .panel-container 
+    {
       margin-top: 8%;
     }
   </style>
@@ -14,7 +15,6 @@
    <h1 style="margin-left: 30%;margin-top:-35px;font-size: 25px">Administrator</h1>
       <br>
       <br>
-        
    </div>    
    <form>
             <div class="form-group" style="margin-left: 20px;width:95%">
@@ -29,19 +29,16 @@
             <br>
           
          <% if devise_mapping.rememberable? -%>
-    <div class="form-control" style="margin-left: 12%">
+    <div class="form-control" style="margin-left: 14  %">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
       <% end -%>
            <br>
             <%= f.submit "Log in" , class: "btn btn-success btn-block" , style: "margin-left:40%;margin-bottom:20px " %>
-          
           </form>
-
         </div>
       </div>
-      
 <% end %>
 
     
